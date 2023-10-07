@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TitleText">
+    <item name="android:fontFamily">serif</item>
+    <item name="android:textSize">28dp</item>
+    <item name="android:textColor">@color/slightly_dark_white</item>
+  </style>
+  <style name="ButtonWithText">
+    <item name="android:fontFamily">serif</item>
+    <item name="android:textSize">28dp</item>
+    <item name="android:textColor">@color/slightly_dark_white</item>
+    <item name="android:backgroundTint">@color/dark_emerald</item>
+  </style>
+</resources>

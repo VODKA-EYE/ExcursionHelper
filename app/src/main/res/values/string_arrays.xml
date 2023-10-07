@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="excursion_names">
+    <item>Каменная летопись военных подвигов</item>
+    <item>От Михайловского замка до Михайловского дворца</item>
+    <item>От площади Островского до Аничкова моста</item>
+    <item>Российский флот сквозь века</item>
+    <item>Храмы Васильевского острова: истории и судьбы</item>
+    <item>Набережные Васильевского острова в лицах</item>
+  </string-array>
+
+</resources>
