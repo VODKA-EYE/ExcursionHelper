@@ -1,6 +1,7 @@
 package com.example.excursionhelper.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
+import com.example.excursionhelper.ExcursionPreview;
+import com.example.excursionhelper.MainActivity;
 import com.example.excursionhelper.R;
 
 import java.util.ArrayList;
@@ -41,7 +44,8 @@ public class ExcursionListAdapter extends BaseAdapter
       @Override
       public void onClick(View view)
       {
-        // Logic goes here
+        Intent intent = new Intent(mContext, ExcursionPreview.class);
+        view.getContext().startActivity(intent);
       }
     });
 
