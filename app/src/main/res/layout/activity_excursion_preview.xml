@@ -12,18 +12,35 @@
     android:padding="4dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/dark_emerald_2">
-    <Button
-      android:id="@+id/return_to_menu_button"
+    android:background="@color/dark_emerald_2"
+    android:orientation="vertical">
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+      <Button
+        android:id="@+id/return_to_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_emerald_2"
+        android:textAlignment="textStart"
+        app:cornerRadius="4dp"
+        app:strokeColor="@color/slightly_dark_white"
+        app:strokeWidth="4dp"
+        android:text="@string/return_button_text"
+        style="@style/ButtonWithText"/>
+      <TextView
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Экскурсия:"
+        style="@style/TitleText"/>
+    </LinearLayout>
+    <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:backgroundTint="@color/dark_emerald_2"
-      android:textAlignment="textStart"
-      app:cornerRadius="4dp"
-      app:strokeColor="@color/slightly_dark_white"
-      app:strokeWidth="4dp"
-      android:text="@string/return_button_text"
-      style="@style/ButtonWithText"/>
+      android:id="@+id/titleTextView"
+      android:text="ЗАГОЛОВОК"
+      style="@style/TitleText"/>
   </LinearLayout>
   <ScrollView
     android:layout_width="match_parent"
@@ -78,6 +95,7 @@
         android:layout_height="128dp"
         android:src="@drawable/excursionicon"/>
       <TextView
+        android:id="@+id/descriptionTextView"
         android:layout_columnSpan="3"
         android:text="The UEF Mavor : Experimental Artillery is a gigantic experimental artillery piece that uses Anti Matter Artillery to bombard any target anywhere on the map with a high degree of accuracy and deadly efficiency. It is one of the most expensive units in the game, but once built, it is essentially a game ender."
         style="@style/TitleText"/>

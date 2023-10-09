@@ -38,13 +38,16 @@ public class ExcursionListAdapter extends BaseAdapter
     LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     view = inflater.inflate(R.layout.excursion_button, parent, false);
     Button excursion_button = (Button) view.findViewById(R.id.excursion_button);
-    excursion_button.setText(mArrData.get(position));
+    String title = mArrData.get(position);
+    excursion_button.setText(title);
     excursion_button.setOnClickListener(new View.OnClickListener()
     {
       @Override
       public void onClick(View view)
       {
         Intent intent = new Intent(mContext, ExcursionPreview.class);
+        intent.putExtra("excursionId", position);
+        intent.putExtra("excursionTitle", title);
         view.getContext().startActivity(intent);
       }
     });
