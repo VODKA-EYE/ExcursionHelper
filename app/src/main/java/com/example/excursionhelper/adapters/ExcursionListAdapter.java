@@ -7,11 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ListAdapter;
-import android.widget.TextView;
-
 import com.example.excursionhelper.ExcursionPreview;
-import com.example.excursionhelper.MainActivity;
 import com.example.excursionhelper.R;
 
 import java.util.ArrayList;
@@ -37,19 +33,15 @@ public class ExcursionListAdapter extends BaseAdapter
   {
     LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     view = inflater.inflate(R.layout.excursion_button, parent, false);
-    Button excursion_button = (Button) view.findViewById(R.id.excursion_button);
+    Button excursion_button = view.findViewById(R.id.excursion_button);
     String title = mArrData.get(position);
     excursion_button.setText(title);
-    excursion_button.setOnClickListener(new View.OnClickListener()
+    excursion_button.setOnClickListener(view1 ->
     {
-      @Override
-      public void onClick(View view)
-      {
-        Intent intent = new Intent(mContext, ExcursionPreview.class);
-        intent.putExtra("excursionId", position);
-        intent.putExtra("excursionTitle", title);
-        view.getContext().startActivity(intent);
-      }
+      Intent intent = new Intent(mContext, ExcursionPreview.class);
+      intent.putExtra("excursionId", position);
+      intent.putExtra("excursionTitle", title);
+      view1.getContext().startActivity(intent);
     });
 
     return view;

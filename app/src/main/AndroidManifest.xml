@@ -13,6 +13,9 @@
     android:theme="@style/Theme.ExcursionHelper"
     tools:targetApi="31">
     <activity
+      android:name=".ExcursionMainActivity"
+      android:exported="false" />
+    <activity
       android:name=".ExcursionPreview"
       android:exported="false" />
     <activity

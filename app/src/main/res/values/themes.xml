@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
   <style name="Base.Theme.ExcursionHelper" parent="Theme.Material3.DayNight.NoActionBar">
-    <item name="android:statusBarColor">@color/dark_emerald</item>
+    <item name="android:statusBarColor">@color/dark_emerald_2</item>
   </style>
 
   <style name="Theme.ExcursionHelper" parent="Base.Theme.ExcursionHelper" />

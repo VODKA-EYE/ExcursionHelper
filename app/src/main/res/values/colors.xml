@@ -5,4 +5,11 @@
   <color name="dark_emerald">#133d3b</color>
   <color name="dark_emerald_2">#133333</color>
   <color name="slightly_dark_white">#fefffd</color>
+  <color name="brown">#C45911</color>
+  <color name="gray">#767171</color>
+  <color name="swamp_green">#436963</color>
+  <color name="light_cyan">#71AAAD</color>
+  <color name="red">#C00000</color>
+  <color name="yellow">#FFC000</color>
+  <color name="toxic_emerald">#00CC99</color>
 </resources>

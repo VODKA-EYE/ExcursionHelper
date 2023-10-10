@@ -8,34 +8,68 @@
   tools:context=".MainActivity"
   android:orientation="vertical"
   android:background="@color/dark_emerald">
+
+  <!-- Title -->
   <LinearLayout
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <androidx.cardview.widget.CardView
-      android:layout_width="128dp"
-      android:layout_height="128dp"
-      app:cardElevation="0dp"
-      app:cardCornerRadius="64dp">
-      <ImageView
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursioniconwhiteback"/>
-    </androidx.cardview.widget.CardView>
-    <TextView
-      android:layout_marginLeft="8dp"
+    android:orientation="horizontal"
+    android:background="@color/dark_emerald_2">
+    <ImageView
+      android:layout_width="144dp"
+      android:layout_height="144dp"
+      android:src="@drawable/logo"/>
+    <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="@string/title"
-      android:layout_marginTop="32dp"
-      style="@style/TitleText"/>
+      android:orientation="vertical">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_p1"
+        android:textColor="@color/brown"
+        style="@style/TitleText"/>
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/title_p2"
+          android:textColor="@color/gray"
+          style="@style/TitleText"/>
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/title_p3"
+          android:textColor="@color/brown"
+          style="@style/TitleText"/>
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/title_p4"
+          android:textColor="@color/gray"
+          style="@style/TitleText"/>
+      </LinearLayout>
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/title_p5"
+          android:textColor="@color/toxic_emerald"
+          android:textSize="24dp"
+          style="@style/TitleText"/>
+      </LinearLayout>
+    </LinearLayout>
   </LinearLayout>
   <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Экскурсии:"
-    android:layout_marginTop="8dp"
-    style="@style/TitleText"/>
+    android:layout_marginStart="4dp"
+    style="@style/NormalText"/>
   <ListView
     android:id="@+id/excursions_listview"
     android:layout_width="wrap_content"

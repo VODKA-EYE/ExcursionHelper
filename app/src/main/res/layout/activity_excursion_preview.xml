@@ -29,18 +29,18 @@
         android:text="@string/return_button_text"
         style="@style/ButtonWithText"/>
       <TextView
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Экскурсия:"
-        style="@style/TitleText"/>
+        style="@style/NormalText"/>
     </LinearLayout>
     <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:id="@+id/titleTextView"
       android:text="ЗАГОЛОВОК"
-      style="@style/TitleText"/>
+      style="@style/NormalText"/>
   </LinearLayout>
   <ScrollView
     android:layout_width="match_parent"
@@ -53,7 +53,7 @@
         android:layout_margin="4dp"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
+        android:src="@drawable/logo"/>
       <com.github.chrisbanes.photoview.PhotoView
         android:layout_margin="4dp"
         android:layout_width="128dp"
@@ -97,14 +97,15 @@
       <TextView
         android:id="@+id/descriptionTextView"
         android:layout_columnSpan="3"
-        android:text="The UEF Mavor : Experimental Artillery is a gigantic experimental artillery piece that uses Anti Matter Artillery to bombard any target anywhere on the map with a high degree of accuracy and deadly efficiency. It is one of the most expensive units in the game, but once built, it is essentially a game ender."
-        style="@style/TitleText"/>
+        android:text="ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ "
+        style="@style/NormalText"/>
       <Button
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_column="1"
         android:layout_columnSpan="2"
         android:id="@+id/begin_excursion_button"
-        android:layout_width="256dp"
+        android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/dark_emerald_2"
         app:cornerRadius="4dp"

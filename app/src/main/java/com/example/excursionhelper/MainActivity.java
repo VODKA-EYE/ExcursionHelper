@@ -12,18 +12,14 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity
 {
-  private ListView mListview;
-  private ArrayList<String> mArrData;
-  private ExcursionListAdapter mAdapter;
-
   @Override
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    mListview = (ListView) findViewById(R.id.excursions_listview);
-    mArrData = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.excursion_names)));
-    mAdapter = new ExcursionListAdapter(MainActivity.this, mArrData);
+    ListView mListview = findViewById(R.id.excursions_listview);
+    ArrayList<String> mArrData = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.excursion_names)));
+    ExcursionListAdapter mAdapter = new ExcursionListAdapter(MainActivity.this, mArrData);
     mListview.setAdapter(mAdapter);
     mAdapter.notifyDataSetChanged();
   }

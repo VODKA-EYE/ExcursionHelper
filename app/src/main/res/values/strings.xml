@@ -1,14 +1,20 @@
 <resources>
-  <string name="app_name">ExcursionHelper</string>
-  <string name="title">Петербург:
-о себе и о людях</string>
+  <string name="app_name">ГОРОД: Дома@люДи</string>
+
+  <string name="title_p1">ГОРОД: </string>
+  <string name="title_p2">Дома</string>
+  <string name="title_p3">\@</string>
+  <string name="title_p4">люДи</string>
+  <string name="title_p5">Экскурсии в картинках</string>
+
   <string name="excursion1">Каменная летопись военных подвигов</string>
   <string name="excursion2">От Михайловского замка до Михайловского дворца</string>
   <string name="excursion3">От площади Островского до Аничкова моста</string>
   <string name="excursion4">Российский флот сквозь века</string>
   <string name="excursion5">Храмы Васильевского острова: истории и судьбы</string>
   <string name="excursion6">Набережные Васильевского острова в лицах</string>
+
   <string name="return_button_text">❮ Назад</string>
-  <string name="begin_excursion_button_text">Начать
-экскурсию</string>
+  <string name="begin_excursion_button_text">Начать\nэкскурсию</string>
+
 </resources>
