@@ -17,11 +17,11 @@ public class ExcursionListAdapter extends BaseAdapter
   private Context mContext;
   private ArrayList<String> mArrData;
 
-  public ExcursionListAdapter(Context context, ArrayList arrData)
+  public ExcursionListAdapter(Context context, ArrayList arrayList)
   {
     super();
     mContext = context;
-    mArrData = arrData;
+    mArrData = arrayList;
   }
 
   public int getCount()
@@ -31,30 +31,29 @@ public class ExcursionListAdapter extends BaseAdapter
 
   public View getView(int position, View view, ViewGroup parent)
   {
-    LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    view = inflater.inflate(R.layout.excursion_button, parent, false);
-    Button excursion_button = view.findViewById(R.id.excursion_button);
-    String title = mArrData.get(position);
-    excursion_button.setText(title);
-    excursion_button.setOnClickListener(view1 ->
+    if(view == null)
     {
-      Intent intent = new Intent(mContext, ExcursionPreview.class);
-      intent.putExtra("excursionId", position);
-      intent.putExtra("excursionTitle", title);
-      view1.getContext().startActivity(intent);
-    });
-
+      LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+      view = inflater.inflate(R.layout.excursion_button, parent, false);
+      Button excursion_button = view.findViewById(R.id.excursion_button);
+      excursion_button.setText(mArrData.get(position));
+      excursion_button.setOnClickListener(view1 ->
+      {
+        Intent intent = new Intent(mContext, ExcursionPreview.class);
+        intent.putExtra("excursionId", position);
+        view1.getContext().startActivity(intent);
+      });
+    }
     return view;
   }
 
   public Object getItem(int position)
   {
-    // TODO Auto-generated method stub
     return position;
   }
 
-  public long getItemId(int position) {
-    // TODO Auto-generated method stub
+  public long getItemId(int position)
+  {
     return position;
   }
 }

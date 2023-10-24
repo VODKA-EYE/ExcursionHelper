@@ -8,11 +8,11 @@
     android:id="@+id/excursion_button"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/dark_emerald_2"
     android:textAlignment="textStart"
-    app:cornerRadius="4dp"
+    app:cornerRadius="24dp"
     app:strokeColor="@color/slightly_dark_white"
     app:strokeWidth="4dp"
+    android:textSize="32dp"
     style="@style/ButtonWithText"/>
 
 </LinearLayout>

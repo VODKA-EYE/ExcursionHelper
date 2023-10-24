@@ -7,96 +7,45 @@
   android:layout_height="match_parent"
   tools:context=".ExcursionPreview"
   android:orientation="vertical"
-  android:background="@color/dark_emerald">
+  style="@style/MainBackground">
   <LinearLayout
     android:padding="4dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/dark_emerald_2"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    style="@style/TopPanelBackground">
     <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content">
-      <Button
-        android:id="@+id/return_to_menu_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/dark_emerald_2"
-        android:textAlignment="textStart"
-        app:cornerRadius="4dp"
-        app:strokeColor="@color/slightly_dark_white"
-        app:strokeWidth="4dp"
-        android:text="@string/return_button_text"
-        style="@style/ButtonWithText"/>
+      <ImageView
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:src="@drawable/logo"/>
       <TextView
-        android:layout_marginStart="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Экскурсия:"
+        android:id="@+id/titleTextView"
+        android:text="ЗАГОЛОВОК"
         style="@style/NormalText"/>
     </LinearLayout>
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/titleTextView"
-      android:text="ЗАГОЛОВОК"
-      style="@style/NormalText"/>
+
   </LinearLayout>
   <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <GridLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:columnCount="3">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
       <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:id="@+id/map_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/logo"/>
-      <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
-      <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
-      <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
-      <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
-      <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
-      <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
-      <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
-      <com.github.chrisbanes.photoview.PhotoView
-        android:layout_margin="4dp"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/excursionicon"/>
       <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:id="@+id/descriptionTextView"
-        android:layout_columnSpan="3"
         android:text="ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ "
         style="@style/NormalText"/>
       <Button
@@ -107,12 +56,11 @@
         android:id="@+id/begin_excursion_button"
         android:layout_width="192dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/dark_emerald_2"
-        app:cornerRadius="4dp"
+        app:cornerRadius="24dp"
         app:strokeColor="@color/slightly_dark_white"
         app:strokeWidth="4dp"
         android:text="@string/begin_excursion_button_text"
         style="@style/ButtonWithText"/>
-    </GridLayout>
+    </LinearLayout>
   </ScrollView>
 </LinearLayout>

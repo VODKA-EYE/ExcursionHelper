@@ -1,0 +1,204 @@
+[
+  {
+    "title": "Каменная летопись военных подвигов",
+    "description": "История Петербурга тесно связана с русской армией. Вы познакомитесь с историческими памятниками четырех разных эпох, напоминающих о великих победах. Петр I и его любимое детище Преображенский полк. Екатерина II и князь Григорий Потёмкин-Таврический. Великий русский полководец А. В. Суворов и подростки-партизаны, сражавшиеся с фашистами. Прогулка вдоль Кирочной улицы позволит познакомиться с великими людьми и творениями талантливых архитекторов и скульпторов.",
+    "mapImageUrl": "",
+    "excursionStops":
+    [
+      {
+        "title": "",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      }
+    ]
+  },
+
+
+
+  {
+    "title": "Романовы: от Павла до Александра II",
+    "description": "Славящийся оригинальностью Павел получил титул Великого магистра рыцарского католического Мальтийского ордена, воплотил в реальность идею создания своего родового замка, где прожил всего 40 дней. Александр II – внук Павла создал на месте смерти деда церковь, стал Царем-Освободителем и как дед погиб от рук злоумышленников. На месте его гибели вырос Спас на Крови. 80 лет истории и три архитектурных шедевра ждут вас на этой экскурсии.",
+    "mapImageUrl": "",
+    "excursionStops":
+    [
+      {
+        "title": "Угол Кленовой и Инженерной улицы",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      },
+
+      {
+        "title": "Инженерный сквер. Памятник Петру Первому В.В. Растрелли",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      },
+
+      {
+        "title": "Угол Кленовой и Замковой улиц",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      },
+
+      {
+        "title": "Внутренний двор Инженерного замка.",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      },
+
+      {
+        "title": "Набережная реки Мойки. Середина Поцелуева моста.",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      },
+
+      {
+        "title": "Вход в Михайловский сад со стороны Садовой улицы.",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      },
+
+      {
+        "title": "Дуб в Михайловском саду. Вид на Михайловский дворец.",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      },
+
+      {
+        "title": "Канал Грибоедова. Вид на храм Спаса на Крови",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      }
+    ]
+  },
+
+
+
+  {
+    "title": "Андреевский бульвар",
+    "description": "Андреевский бульвар - молодое лицо исторической части города. Пешеходная зона между 6-7 линиями Васильевского острова появилась в 2001 году, современные скульпторы и архитекторы укр   асили её памятниками. Эти памятники соседствуют со зданиями, чья история связана с Петром I, Александром Меньшиковым, Анной Иоанновной, Екатериной Великой. Для вас легенды и реальные факты из истории Васильевского острова.",
+    "mapImageUrl": "",
+    "excursionStops":
+    [
+      {
+        "title": "",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      }
+    ]
+  },
+
+
+
+  {
+    "title": "Карл Росси и русский театр",
+    "description": "",
+    "mapImageUrl": "",
+    "excursionStops":
+    [
+      {
+        "title": "",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      }
+    ]
+  },
+
+
+
+  {
+    "title": "Российский флот сквозь века",
+    "description": "TESTDESCRIPTION TESTDESCRIPTION",
+    "mapImageUrl": "testmap1",
+    "excursionStops":
+    [
+      {
+        "title": "Набережная Лейтенанта Шмидта, д.2 Благовещенский мост",
+        "imageUrls":["testmap2", "testmap3"],
+        "imageDescriptions":["test test test test test test test test test test test test test test ", "tset tset tset tset tset tset tset tset tset tset tset tset tset tset "]
+      },
+      {
+        "title": "Набережная Лейтенанта Шмидта, Памятник И.Ф. Крузенштерну",
+        "imageUrls":["testmap3"],
+        "imageDescriptions":["test test test test test test test test test test test test test test "]
+      },
+      {
+        "title": "Набережная Лейтенанта Шмидта, д.17; Военно-морская Академия",
+        "imageUrls":["logo"],
+        "imageDescriptions":["test test test test test test test test test test test test test test "]
+      },
+      {
+        "title": "Набережная Лейтенанта Шмидта, д.27; Церковь Успения Пресвятой Богородицы",
+        "imageUrls":["logo"],
+        "imageDescriptions":["test test test test test test test test test test test test test test "]
+      },
+      {
+        "title": "Подводная лодка С-189",
+        "imageUrls":["logo"],
+        "imageDescriptions":["test test test test test test test test test test test test test test "]
+      },
+      {
+        "title": "Набережная Лейтенанта Шмидта, д.45",
+        "imageUrls":["logo"],
+        "imageDescriptions":["test test test test test test test test test test test test test test "]
+      },
+      {
+        "title": "Ледокол «Красин»",
+        "imageUrls":["logo"],
+        "imageDescriptions":["test test test test test test test test test test test test test test "]
+      },
+      {
+        "title": "Галерная гавань",
+        "imageUrls":["logo"],
+        "imageDescriptions":["test test test test test test test test test test test test test test "]
+      }
+    ]
+  },
+
+
+
+  {
+    "title": "Васильевский остров: храмы и судьбы",
+    "description": "",
+    "mapImageUrl": "",
+    "excursionStops":
+    [
+      {
+        "title": "",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      }
+    ]
+  },
+
+
+
+  {
+    "title": "Набережная Макарова в лицах",
+    "description": "",
+    "mapImageUrl": "",
+    "excursionStops":
+    [
+      {
+        "title": "",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      }
+    ]
+  },
+
+
+
+  {
+    "title": "От Трезини до Ломоносова",
+    "description": "",
+    "mapImageUrl": "",
+    "excursionStops":
+    [
+      {
+        "title": "",
+        "imageUrls":[""],
+        "imageDescriptions":[""]
+      }
+    ]
+  }
+]

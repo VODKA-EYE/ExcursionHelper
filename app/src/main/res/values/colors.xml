@@ -9,7 +9,9 @@
   <color name="gray">#767171</color>
   <color name="swamp_green">#436963</color>
   <color name="light_cyan">#71AAAD</color>
+  <color name="light_cyan_darker">#609090</color>
   <color name="red">#C00000</color>
   <color name="yellow">#FFC000</color>
   <color name="toxic_emerald">#00CC99</color>
+  <color name="light_blue">#d6f0fb</color>
 </resources>

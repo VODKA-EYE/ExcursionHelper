@@ -7,72 +7,43 @@
   android:layout_height="match_parent"
   tools:context=".MainActivity"
   android:orientation="vertical"
-  android:background="@color/dark_emerald">
+  style="@style/MainBackground">
 
   <!-- Title -->
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@color/dark_emerald_2">
+    style="@style/TopPanelBackground">
     <ImageView
-      android:layout_width="144dp"
-      android:layout_height="144dp"
+      android:layout_width="112dp"
+      android:layout_height="112dp"
       android:src="@drawable/logo"/>
     <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="vertical">
       <TextView
+        android:id="@+id/title_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_p1"
-        android:textColor="@color/brown"
+        android:textColor="@color/white"
+        android:textSize="28dp"
         style="@style/TitleText"/>
-      <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="@string/title_p2"
-          android:textColor="@color/gray"
-          style="@style/TitleText"/>
-        <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/title_p3"
-          android:textColor="@color/brown"
-          style="@style/TitleText"/>
-        <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/title_p4"
-          android:textColor="@color/gray"
-          style="@style/TitleText"/>
-      </LinearLayout>
-      <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/title_p5"
-          android:textColor="@color/toxic_emerald"
+          android:textColor="@color/light_blue"
           android:textSize="24dp"
           style="@style/TitleText"/>
-      </LinearLayout>
     </LinearLayout>
   </LinearLayout>
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Экскурсии:"
-    android:layout_marginStart="4dp"
-    style="@style/NormalText"/>
   <ListView
     android:id="@+id/excursions_listview"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@color/light_cyan">
   </ListView>
 </LinearLayout>
