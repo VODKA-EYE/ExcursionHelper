@@ -36,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <Button
+          android:id="@+id/previous_page_button"
           android:textAlignment="center"
           app:cornerRadius="32dp"
           android:layout_width="64dp"
@@ -64,6 +65,7 @@
           android:layout_height="wrap_content"
           style="@style/NormalText"/>
         <Button
+          android:id="@+id/next_page_button"
           android:layout_marginStart="32dp"
           android:textAlignment="center"
           app:cornerRadius="32dp"

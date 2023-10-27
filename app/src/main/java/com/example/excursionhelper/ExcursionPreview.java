@@ -38,6 +38,7 @@ public class ExcursionPreview extends AppCompatActivity
     goToExcursion.setOnClickListener(view ->
     {
       Intent intent2 = new Intent(ExcursionPreview.this, ExcursionMainActivity.class);
+      intent2.putExtra("excursionId", excursionId);
       startActivity(intent2);
     });
 
