@@ -31,8 +31,8 @@ public class ExcursionListAdapter extends BaseAdapter
 
   public View getView(int position, View view, ViewGroup parent)
   {
-    if(view == null)
-    {
+    //if(view == null)
+    //{
       LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
       view = inflater.inflate(R.layout.excursion_button, parent, false);
       Button excursion_button = view.findViewById(R.id.excursion_button);
@@ -43,7 +43,7 @@ public class ExcursionListAdapter extends BaseAdapter
         intent.putExtra("excursionId", position);
         view1.getContext().startActivity(intent);
       });
-    }
+    //}
     return view;
   }
 

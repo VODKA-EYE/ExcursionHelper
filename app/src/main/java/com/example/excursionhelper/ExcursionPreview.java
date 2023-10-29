@@ -63,10 +63,9 @@ public class ExcursionPreview extends AppCompatActivity
     int imageID = getResources().getIdentifier(imageName , "drawable", getPackageName());
     mapPhoto.setImageResource(imageID);
 
-    DisplayMetrics displayMetrics = new DisplayMetrics();
-    getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+    /*DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
     mapPhoto.getLayoutParams().height = displayMetrics.widthPixels;
     mapPhoto.getLayoutParams().width = displayMetrics.widthPixels;
-    mapPhoto.requestLayout();
+    mapPhoto.requestLayout();*/
   }
 }

@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity
     title_textview = findViewById(R.id.title_textview);
 
     SharedPreferences prefs = getSharedPreferences("JSON", Context.MODE_PRIVATE);
-    if (!prefs.getBoolean("firstTime", false))
-    {
+    //if (!prefs.getBoolean("firstTime", false))
+    //{
       SharedPreferences.Editor editor = prefs.edit();
       editor.putString("JSONString", loadJSONFromAsset());
       editor.putBoolean("firstTime", true);
       editor.apply();
-    }
+    //}
     String JSON = prefs.getString("JSONString","");
 
     ColorTitleText();

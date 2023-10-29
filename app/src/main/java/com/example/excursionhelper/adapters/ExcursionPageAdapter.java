@@ -1,6 +1,7 @@
 package com.example.excursionhelper.adapters;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,8 +32,8 @@ public class ExcursionPageAdapter extends BaseAdapter
 
   public View getView(int position, View view, ViewGroup parent)
   {
-    if (view == null)
-    {
+    //if (view == null)
+    //{
       LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
       view = inflater.inflate(R.layout.excursion_page_item, parent, false);
       PhotoView photoView = view.findViewById(R.id.photo);
@@ -40,10 +41,9 @@ public class ExcursionPageAdapter extends BaseAdapter
       String imageName = images.get(position);
       int imageID = mContext.getResources().getIdentifier(imageName , "drawable", mContext.getPackageName());
       photoView.setImageResource(imageID);
-
       TextView descriptionView = view.findViewById(R.id.image_description);
       descriptionView.setText(descriptions.get(position));
-    }
+    //}
     return view;
   }
 

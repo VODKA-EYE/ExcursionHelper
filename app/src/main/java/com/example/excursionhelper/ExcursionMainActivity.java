@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class ExcursionMainActivity extends AppCompatActivity
 {
   TextView page_number, page_amount, page_title;
-  Button returnToMenu, previousPage, nextPage;
+  Button previousPage, nextPage;
   ArrayList<ExcursionPageClass> page_list;
   Integer selected_page = 0;
   @Override
@@ -29,12 +29,6 @@ public class ExcursionMainActivity extends AppCompatActivity
     page_number = findViewById(R.id.page_number_text_view);
     page_amount = findViewById(R.id.page_amount_text_view);
     page_title = findViewById(R.id.page_title_text_view);
-    returnToMenu = findViewById(R.id.return_to_menu_button);
-    returnToMenu.setOnClickListener(view ->
-    {
-      Intent intent1 = new Intent(ExcursionMainActivity.this, MainActivity.class);
-      startActivity(intent1);
-    });
     previousPage = findViewById(R.id.previous_page_button);
     previousPage.setOnClickListener(view ->
     {
@@ -42,6 +36,10 @@ public class ExcursionMainActivity extends AppCompatActivity
       {
         selected_page--;
         LoadPage();
+      }
+      else
+      {
+        finish();
       }
     });
     nextPage = findViewById(R.id.next_page_button);

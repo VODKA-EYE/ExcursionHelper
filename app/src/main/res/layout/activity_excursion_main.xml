@@ -13,29 +13,8 @@
     android:layout_height="wrap_content"
     style="@style/TopPanelBackground"
     android:orientation="horizontal">
-    <ImageView
-      android:layout_width="128dp"
-      android:layout_height="128dp"
-      android:src="@drawable/logo"/>
-    <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="vertical">
-      <Button
-        android:id="@+id/return_to_menu_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="textStart"
-        app:cornerRadius="24dp"
-        app:strokeColor="@color/slightly_dark_white"
-        app:strokeWidth="4dp"
-        android:text="@string/return_button_text"
-        style="@style/ButtonWithText"/>
-      <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <Button
+          android:layout_marginStart="8dp"
           android:id="@+id/previous_page_button"
           android:textAlignment="center"
           app:cornerRadius="32dp"
@@ -43,7 +22,7 @@
           android:layout_height="64dp"
           app:strokeColor="@color/slightly_dark_white"
           app:strokeWidth="4dp"
-          android:text=""
+          android:text="❮"
           android:textSize="32dp"
           style="@style/ButtonWithText"/>
         <TextView
@@ -66,18 +45,16 @@
           style="@style/NormalText"/>
         <Button
           android:id="@+id/next_page_button"
-          android:layout_marginStart="32dp"
+          android:layout_marginStart="16dp"
           android:textAlignment="center"
           app:cornerRadius="32dp"
           android:layout_width="64dp"
           android:layout_height="64dp"
           app:strokeColor="@color/slightly_dark_white"
           app:strokeWidth="4dp"
-          android:text=""
+          android:text="❯"
           android:textSize="32dp"
           style="@style/ButtonWithText"/>
-      </LinearLayout>
-    </LinearLayout>
   </LinearLayout>
   <TextView
     android:id="@+id/page_title_text_view"
@@ -91,6 +68,8 @@
     android:id="@+id/page_items_listview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:divider="@color/light_cyan">
+    android:divider="@color/light_cyan"
+    android:dividerHeight="32dp"
+    >
   </ListView>
 </LinearLayout>
