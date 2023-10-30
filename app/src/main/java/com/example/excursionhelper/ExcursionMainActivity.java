@@ -26,6 +26,11 @@ public class ExcursionMainActivity extends AppCompatActivity
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_excursion_main);
+    if(savedInstanceState != null)
+    {
+      selected_page = savedInstanceState.getInt("selected_page");
+    }
+
     page_number = findViewById(R.id.page_number_text_view);
     page_amount = findViewById(R.id.page_amount_text_view);
     page_title = findViewById(R.id.page_title_text_view);
@@ -53,6 +58,13 @@ public class ExcursionMainActivity extends AppCompatActivity
     });
 
     SetupContent();
+  }
+
+  @Override
+  protected void onSaveInstanceState(Bundle outState)
+  {
+    super.onSaveInstanceState(outState);
+    outState.putInt("selected_page",selected_page);
   }
 
   private void SetupContent()
