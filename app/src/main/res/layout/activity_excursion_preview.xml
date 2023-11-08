@@ -49,19 +49,33 @@
         android:id="@+id/descriptionTextView"
         android:text="ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ ОПИСАНИЕ "
         style="@style/NormalText"/>
-      <Button
+      <LinearLayout
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_column="1"
-        android:layout_columnSpan="2"
-        android:id="@+id/begin_excursion_button"
-        android:layout_width="192dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cornerRadius="24dp"
-        app:strokeColor="@color/slightly_dark_white"
-        app:strokeWidth="4dp"
-        android:text="@string/begin_excursion_button_text"
-        style="@style/ButtonWithText"/>
+        android:orientation="horizontal">
+        <Button
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:id="@+id/goto_mainmenu_button"
+          app:strokeColor="@color/slightly_dark_white"
+          app:cornerRadius="24dp"
+          app:strokeWidth="4dp"
+          android:text="@string/return_button_text"
+          style="@style/ButtonWithText"
+          />
+        <Button
+          android:layout_marginStart="8dp"
+          android:id="@+id/begin_excursion_button"
+          android:layout_width="192dp"
+          android:layout_height="wrap_content"
+          app:cornerRadius="24dp"
+          app:strokeColor="@color/slightly_dark_white"
+          app:strokeWidth="4dp"
+          android:text="@string/begin_excursion_button_text"
+          style="@style/ButtonWithText"/>
+      </LinearLayout>
     </LinearLayout>
   </ScrollView>
 </LinearLayout>

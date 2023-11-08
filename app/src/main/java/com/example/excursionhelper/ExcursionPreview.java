@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class ExcursionPreview extends AppCompatActivity
 {
   TextView titleTextView, descriptionTextView;
-  Button goToExcursion;
+  Button goToExcursion, goToMenu;
   PhotoView mapPhoto;
   Integer excursionId;
   @Override
@@ -41,7 +41,11 @@ public class ExcursionPreview extends AppCompatActivity
       intent2.putExtra("excursionId", excursionId);
       startActivity(intent2);
     });
-
+    goToMenu = findViewById(R.id.goto_mainmenu_button);
+    goToMenu.setOnClickListener(view ->
+    {
+      finish();
+    });
   }
 
   private void LoadText()

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class ExcursionMainActivity extends AppCompatActivity
 {
   TextView page_number, page_amount, page_title;
-  Button previousPage, nextPage;
+  Button previousPage, nextPage, goToMenu;
   ArrayList<ExcursionPageClass> page_list;
   Integer selected_page = 0;
   @Override
@@ -42,10 +42,6 @@ public class ExcursionMainActivity extends AppCompatActivity
         selected_page--;
         LoadPage();
       }
-      else
-      {
-        finish();
-      }
     });
     nextPage = findViewById(R.id.next_page_button);
     nextPage.setOnClickListener(view ->
@@ -56,7 +52,11 @@ public class ExcursionMainActivity extends AppCompatActivity
         LoadPage();
       }
     });
-
+    goToMenu = findViewById(R.id.goto_mainmenu_button);
+    goToMenu.setOnClickListener(view ->
+    {
+      finish();
+    });
     SetupContent();
   }
 

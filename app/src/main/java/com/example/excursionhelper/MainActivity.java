@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.example.excursionhelper.adapters.ExcursionListAdapter;
@@ -50,8 +52,10 @@ public class MainActivity extends AppCompatActivity
 
     ForegroundColorSpan fcsYellow = new ForegroundColorSpan(getResources().getColor(R.color.yellow));
     ForegroundColorSpan fcsYellow2 = new ForegroundColorSpan(getResources().getColor(R.color.yellow));
+    StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
     ss.setSpan(fcsYellow, 0,7, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-    ss.setSpan(fcsYellow2, 11,12, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+    ss.setSpan(fcsYellow2, 11,13, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+    ss.setSpan(boldSpan, 11,13, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
     title_textview.setText(ss);
   }
 

@@ -13,48 +13,58 @@
     android:layout_height="wrap_content"
     style="@style/TopPanelBackground"
     android:orientation="horizontal">
-        <Button
-          android:layout_marginStart="8dp"
-          android:id="@+id/previous_page_button"
-          android:textAlignment="center"
-          app:cornerRadius="32dp"
-          android:layout_width="64dp"
-          android:layout_height="64dp"
-          app:strokeColor="@color/slightly_dark_white"
-          app:strokeWidth="4dp"
-          android:text="❮"
-          android:textSize="32dp"
-          style="@style/ButtonWithText"/>
-        <TextView
-          android:text="99"
-          android:id="@+id/page_number_text_view"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="16dp"
-          style="@style/NormalText"/>
-        <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="/"
-          style="@style/NormalText"/>
-        <TextView
-          android:text="99"
-          android:id="@+id/page_amount_text_view"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          style="@style/NormalText"/>
-        <Button
-          android:id="@+id/next_page_button"
-          android:layout_marginStart="16dp"
-          android:textAlignment="center"
-          app:cornerRadius="32dp"
-          android:layout_width="64dp"
-          android:layout_height="64dp"
-          app:strokeColor="@color/slightly_dark_white"
-          app:strokeWidth="4dp"
-          android:text="❯"
-          android:textSize="32dp"
-          style="@style/ButtonWithText"/>
+    <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/goto_mainmenu_button"
+      app:strokeColor="@color/slightly_dark_white"
+      app:strokeWidth="4dp"
+      android:text="@string/return_button_text"
+      style="@style/ButtonWithText"
+      android:textSize="28dp"
+      />
+    <Button
+      android:layout_marginStart="8dp"
+      android:id="@+id/previous_page_button"
+      android:textAlignment="center"
+      app:cornerRadius="32dp"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      app:strokeColor="@color/slightly_dark_white"
+      app:strokeWidth="4dp"
+      android:text="❮"
+      android:textSize="32dp"
+      style="@style/ButtonWithText"/>
+    <TextView
+      android:text="99"
+      android:id="@+id/page_number_text_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      style="@style/NormalText"/>
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="/"
+      style="@style/NormalText"/>
+    <TextView
+      android:text="99"
+      android:id="@+id/page_amount_text_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      style="@style/NormalText"/>
+    <Button
+      android:id="@+id/next_page_button"
+      android:layout_marginStart="16dp"
+      android:textAlignment="center"
+      app:cornerRadius="32dp"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      app:strokeColor="@color/slightly_dark_white"
+      app:strokeWidth="4dp"
+      android:text="❯"
+      android:textSize="32dp"
+      style="@style/ButtonWithText"/>
   </LinearLayout>
   <TextView
     android:id="@+id/page_title_text_view"
@@ -62,7 +72,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="PAGETITLE PAGETITLE PAGETITLEPAGETITLE PAGETITLE PAGETITLE"
+
     style="@style/NormalText"
+    android:textSize="20dp"
     android:background="@color/light_cyan_darker"/>
   <ListView
     android:id="@+id/page_items_listview"
