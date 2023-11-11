@@ -41,11 +41,11 @@ public class ExcursionPageAdapter extends BaseAdapter
       String imageName = images.get(position);
       int imageID = mContext.getResources().getIdentifier(imageName , "drawable", mContext.getPackageName());
       photoView.setImageResource(imageID);
-      DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
-      if(displayMetrics.widthPixels > displayMetrics.heightPixels)
-      {
+      //DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
+      //if(displayMetrics.widthPixels > displayMetrics.heightPixels)
+      //{
         //photoView.getLayoutParams().width
-      }
+      //}
 
       TextView descriptionView = view.findViewById(R.id.image_description);
       descriptionView.setText(descriptions.get(position));
