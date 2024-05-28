@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity
         }
         else
         {
+          dialog.dismiss();
           Toast.makeText(MainActivity.this, getResources().getText(R.string.content_cant_load), Toast.LENGTH_LONG).show();
         }
       });
@@ -150,7 +151,6 @@ public class MainActivity extends AppCompatActivity
     ss.setSpan(boldSpan, 11,13, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
     title_textview.setText(ss);
   }
-
 
   /*
   private String loadJSONFromAsset()
