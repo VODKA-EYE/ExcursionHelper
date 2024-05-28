@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  style="@style/MainBackground"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".ExcursionPreview">
+
+  <!-- Top panel -->
+  <LinearLayout
+    style="@style/TopPanelBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <Button
+        android:id="@+id/returnButton"
+        style="@style/ButtonWithText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/return_button_text"
+        app:cornerRadius="24dp"
+        app:strokeColor="@color/slightly_dark_white"
+        app:strokeWidth="4dp" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="100" />
+
+      <Button
+        android:id="@+id/buttonLeaveComment"
+        style="@style/ButtonWithText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="@string/leave_comment"
+        app:cornerRadius="24dp"
+        app:strokeColor="@color/slightly_dark_white"
+        app:strokeWidth="4dp" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <!-- Main content -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical">
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/your_name"
+      style="@style/NormalText"/>
+    <EditText
+      android:id="@+id/editTextUserName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/light_cyan_darker"
+      style="@style/NormalText" />
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/comment"
+      style="@style/NormalText"/>
+    <EditText
+      android:id="@+id/editTextComment"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/light_cyan_darker"
+      style="@style/NormalText" />
+  </LinearLayout>
+</LinearLayout>

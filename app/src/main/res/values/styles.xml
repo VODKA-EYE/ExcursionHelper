@@ -2,16 +2,16 @@
 <resources>
   <style name="TitleText">
     <item name="android:fontFamily">@font/bahnschrift_condensed</item>
-    <item name="android:textSize">36dp</item>
+    <item name="android:textSize">32dp</item>
   </style>
   <style name="NormalText">
     <item name="android:fontFamily">@font/bahnschrift_light</item>
-    <item name="android:textSize">28dp</item>
+    <item name="android:textSize">24dp</item>
     <item name="android:textColor">@color/slightly_dark_white</item>
   </style>
   <style name="ButtonWithText">
     <item name="android:fontFamily">@font/bahnschrift_light</item>
-    <item name="android:textSize">28dp</item>
+    <item name="android:textSize">24dp</item>
     <item name="android:textColor">@color/slightly_dark_white</item>
     <item name="android:backgroundTint">@color/swamp_green</item>
   </style>

@@ -1,5 +1,6 @@
 package com.example.excursionhelper;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -9,18 +10,22 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.example.excursionhelper.adapters.ExcursionPageAdapter;
+import com.example.excursionhelper.adapters.ImagesAdapter;
+import com.example.excursionhelper.models.CheckpointClass;
+import com.example.excursionhelper.models.ExcursionClass;
+import com.example.excursionhelper.models.ImageClass;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class ExcursionMainActivity extends AppCompatActivity
 {
   TextView page_number, page_amount, page_title;
   Button previousPage, nextPage, goToMenu;
-  ArrayList<ExcursionPageClass> page_list;
-  Integer selected_page = 0;
+  ArrayList<CheckpointClass> page_list;
+  Integer selected_page = 0, excursionId;
   @Override
   protected void onCreate(Bundle savedInstanceState)
   {
@@ -51,17 +56,20 @@ public class ExcursionMainActivity extends AppCompatActivity
         selected_page++;
         LoadPage();
       }
+      else
+      {
+        Intent intent2 = new Intent(ExcursionMainActivity.this, CommentActivity.class);
+        intent2.putExtra("excursionId", excursionId);
+        startActivity(intent2);
+      }
     });
     goToMenu = findViewById(R.id.goto_mainmenu_button);
-    goToMenu.setOnClickListener(view ->
-    {
-      finish();
-    });
+    goToMenu.setOnClickListener(view -> finish());
     SetupContent();
   }
 
   @Override
-  protected void onSaveInstanceState(Bundle outState)
+  protected void onSaveInstanceState(@NonNull Bundle outState)
   {
     super.onSaveInstanceState(outState);
     outState.putInt("selected_page",selected_page);
@@ -72,13 +80,13 @@ public class ExcursionMainActivity extends AppCompatActivity
     SharedPreferences prefs = getSharedPreferences("JSON", Context.MODE_PRIVATE);
     String JSON = prefs.getString("JSONString","");
     Intent intent = getIntent();
-    int excursionId = intent.getIntExtra("excursionId",0);
-
+    excursionId = intent.getIntExtra("excursionId",0);
+    selected_page = intent.getIntExtra("selected_page",0);
     Gson gson = new Gson();
     Type listType = new TypeToken<ArrayList<ExcursionClass>>(){}.getType();
     ArrayList<ExcursionClass> excursionArray = gson.fromJson(JSON,listType);
-    ExcursionClass excursion = excursionArray.get(excursionId);
-    page_list = excursion.getExcursionStops();
+    ExcursionClass excursion = excursionArray.stream().filter(e -> e.getExcursionId() == excursionId).collect(Collectors.toList()).get(0);
+    page_list = excursion.getCheckpoints();
 
     LoadPage();
   }
@@ -86,14 +94,12 @@ public class ExcursionMainActivity extends AppCompatActivity
   private void LoadPage()
   {
     ListView page_listview = findViewById(R.id.page_items_listview);
-    ExcursionPageClass page = page_list.get(selected_page);
+    CheckpointClass checkpointClass = page_list.get(selected_page);
     page_number.setText(String.valueOf(selected_page+1));
     page_amount.setText(String.valueOf(page_list.size()));
-    page_title.setText(page.getTitle());
-    ArrayList<String> images = page.getImageUrls();
-    ArrayList<String> descriptions = page.getImageDescriptions();
-
-    ExcursionPageAdapter mAdapter = new ExcursionPageAdapter(ExcursionMainActivity.this, images, descriptions);
+    page_title.setText(checkpointClass.getTitle());
+    ArrayList<ImageClass> images = checkpointClass.getImages();
+    ImagesAdapter mAdapter = new ImagesAdapter(ExcursionMainActivity.this, images);
     page_listview.setAdapter(mAdapter);
     mAdapter.notifyDataSetChanged();
   }

@@ -2,7 +2,19 @@
   <string name="app_name">ГОРОД: Дома𓊝люДи</string>
   <string name="title_p1">ГОРОД: Дома𓊝люДи</string>
   <string name="title_p2">Экскурсии в картинках</string>
-  <string name="return_button_text">❮ Назад</string>
-  <string name="begin_excursion_button_text">Начать\nэкскурсию</string>
-
+  <string name="return_button_text">Назад</string>
+  <string name="begin_excursion_button_text">Начать</string>
+  <string name="open_description">Открыть описание</string>
+  <string name="open_map_in_browser"><u>Открыть карту в браузере</u> ↗</string>
+  <string name="open_map_image">Открыть карту</string>
+  <string name="close_map_image">Скрыть карту</string>
+  <string name="loading">Загрузка...</string>
+  <string name="description">Описание</string>
+  <string name="leave_comment">Оставить отзыв</string>
+  <string name="your_name">Ваше имя:</string>
+  <string name="comment">Отзыв:</string>
+  <string name="comment_published">Отзыв сохранён!</string>
+  <string name="content_cant_load">Нет доступа к данным! Перезапустите приложение позже.</string>
+  <string name="content_offline">Нет доступа к данным! Загружены сохранённые данные.</string>
+  <string name="comment_not_published">Отзыв не опубликован! Попробуйте позже.</string>
 </resources>

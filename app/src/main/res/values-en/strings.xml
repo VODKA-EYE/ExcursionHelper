@@ -1,0 +1,20 @@
+<resources>
+  <string name="app_name">ГОРОД: Дома𓊝люДи</string>
+  <string name="title_p1">ГОРОД: Дома𓊝люДи</string>
+  <string name="title_p2">Excursions in images</string>
+  <string name="return_button_text">Return</string>
+  <string name="begin_excursion_button_text">Begin</string>
+  <string name="open_description">Open description</string>
+  <string name="open_map_in_browser"><u>Open map in browser</u> ↗</string>
+  <string name="open_map_image">Open map</string>
+  <string name="close_map_image">Hide map</string>
+  <string name="loading">Loading...</string>
+  <string name="description">Description</string>
+  <string name="leave_comment">Leave review</string>
+  <string name="your_name">Your name:</string>
+  <string name="comment">Review:</string>
+  <string name="comment_published">Review published!</string>
+  <string name="content_cant_load">No access to data! Reopen app later.</string>
+  <string name="content_offline">No access to data! Saved data loaded.</string>
+  <string name="comment_not_published">Review not published! Please, try later.</string>
+</resources>

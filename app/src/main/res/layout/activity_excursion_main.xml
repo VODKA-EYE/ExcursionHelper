@@ -8,6 +8,7 @@
   tools:context=".ExcursionMainActivity"
   android:orientation="vertical"
   style="@style/MainBackground">
+  <!-- Top bar -->
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -23,6 +24,10 @@
       style="@style/ButtonWithText"
       android:textSize="28dp"
       />
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="100"/>
     <Button
       android:layout_marginStart="8dp"
       android:id="@+id/previous_page_button"

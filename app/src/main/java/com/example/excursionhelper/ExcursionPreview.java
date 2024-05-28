@@ -1,25 +1,38 @@
 package com.example.excursionhelper;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
+import android.text.util.Linkify;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.excursionhelper.adapters.CheckpointListAdapter;
+import com.example.excursionhelper.models.CheckpointClass;
+import com.example.excursionhelper.models.ExcursionClass;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.koushikdutta.ion.Ion;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class ExcursionPreview extends AppCompatActivity
 {
-  TextView titleTextView, descriptionTextView;
+  TextView titleTextView, mapUrlTextView, descriptionTextView, mapOpen, mapClose;
   Button goToExcursion, goToMenu;
   PhotoView mapPhoto;
   Integer excursionId;
+  AlertDialog dialog;
+  ListView checkpointListView;
   @Override
   protected void onCreate(Bundle savedInstanceState)
   {
@@ -32,7 +45,6 @@ public class ExcursionPreview extends AppCompatActivity
   private void InitializeViewItems()
   {
     titleTextView = findViewById(R.id.titleTextView);
-    descriptionTextView = findViewById(R.id.descriptionTextView);
     mapPhoto = findViewById(R.id.map_photo);
     goToExcursion = findViewById(R.id.begin_excursion_button);
     goToExcursion.setOnClickListener(view ->
@@ -42,10 +54,25 @@ public class ExcursionPreview extends AppCompatActivity
       startActivity(intent2);
     });
     goToMenu = findViewById(R.id.goto_mainmenu_button);
-    goToMenu.setOnClickListener(view ->
+    goToMenu.setOnClickListener(view -> finish());
+    mapUrlTextView = findViewById(R.id.map_url_open);
+    descriptionTextView = findViewById(R.id.description_open);
+    descriptionTextView.setOnClickListener(view -> dialog.show());
+    mapOpen = findViewById(R.id.map_image_open);
+    mapOpen.setOnClickListener(view ->
     {
-      finish();
+      mapOpen.setVisibility(View.GONE);
+      mapClose.setVisibility(View.VISIBLE);
+      mapPhoto.setVisibility(View.VISIBLE);
     });
+    mapClose = findViewById(R.id.map_image_close);
+    mapClose.setOnClickListener(view ->
+    {
+      mapOpen.setVisibility(View.VISIBLE);
+      mapClose.setVisibility(View.GONE);
+      mapPhoto.setVisibility(View.GONE);
+    });
+    checkpointListView = findViewById(R.id.checkpoints_listview);
   }
 
   private void LoadText()
@@ -58,18 +85,34 @@ public class ExcursionPreview extends AppCompatActivity
     Gson gson = new Gson();
     Type listType = new TypeToken<ArrayList<ExcursionClass>>(){}.getType();
     ArrayList<ExcursionClass> excursionArray = gson.fromJson(JSON,listType);
-    ExcursionClass excursion = excursionArray.get(excursionId);
+    ExcursionClass excursion = excursionArray.stream().filter(e -> e.getExcursionId() == excursionId).collect(Collectors.toList()).get(0);
 
     titleTextView.setText(excursion.getTitle());
-    descriptionTextView.setText(excursion.getDescription());
 
-    String imageName = excursion.getMapImageUrl();
-    int imageID = getResources().getIdentifier(imageName , "drawable", getPackageName());
-    mapPhoto.setImageResource(imageID);
+    String imageUrl = excursion.getMapImageUrl();
+    Ion.with(mapPhoto).load(imageUrl);
+
+    // Set redirection to web url of map
+    String mapUrl = excursion.getMapUrl();
+    Pattern mapUrlPattern = Pattern.compile(getResources().getString(R.string.open_map_in_browser));
+    Linkify.addLinks(mapUrlTextView, mapUrlPattern, mapUrl);
+
+    // Set description popup
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    builder.setMessage(excursion.getDescription()).setTitle(R.string.description);
+    dialog = builder.create();
+
+    // Set checkpoint buttons
+    ArrayList<CheckpointClass> checkpoints = excursion.getCheckpoints();
+    CheckpointListAdapter mAdapter = new CheckpointListAdapter(this, checkpoints, excursionId);
+    checkpointListView.setAdapter(mAdapter);
+    mAdapter.notifyDataSetChanged();
 
     /*DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
     mapPhoto.getLayoutParams().height = displayMetrics.widthPixels;
     mapPhoto.getLayoutParams().width = displayMetrics.widthPixels;
     mapPhoto.requestLayout();*/
   }
+
+
 }
