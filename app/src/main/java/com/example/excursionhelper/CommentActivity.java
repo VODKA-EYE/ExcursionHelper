@@ -3,14 +3,12 @@ package com.example.excursionhelper;
 
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -20,6 +18,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.excursionhelper.models.CommentClass;
 import com.google.gson.Gson;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,6 +32,12 @@ public class CommentActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    AlertDialog.Builder ADbuilder = new AlertDialog.Builder(this);
+    ADbuilder.setCancelable(false);
+    ADbuilder.setView(R.layout.layout_loading_dialog);
+    dialog = ADbuilder.create();
+
     setContentView(R.layout.activity_comment);
     etName = findViewById(R.id.editTextUserName);
     etComment = findViewById(R.id.editTextComment);
@@ -49,15 +54,8 @@ public class CommentActivity extends AppCompatActivity {
     });
   }
 
-  private void leaveComment() throws JSONException
-  {
-    if (!etName.getText().toString().equals("") || !etComment.getText().toString().equals(""))
-    {
-      // Loading on comment
-      AlertDialog.Builder ADbuilder = new AlertDialog.Builder(this);
-      ADbuilder.setCancelable(false);
-      ADbuilder.setView(R.layout.layout_loading_dialog);
-      dialog = ADbuilder.create();
+  private void leaveComment() throws JSONException {
+    if (!etName.getText().toString().equals("") || !etComment.getText().toString().equals("")) {
       dialog.show();
       // Fetching data
       Intent intent = getIntent();
@@ -71,15 +69,16 @@ public class CommentActivity extends AppCompatActivity {
       JsonObjectRequest getrequest = new JsonObjectRequest(Request.Method.POST,
         leaveCommentUrl, jsonBody, response ->
         {
-          NotificationCompat.Builder builder = new NotificationCompat
-          .Builder(CommentActivity.this, "commentPublishedChannel")
-          .setSmallIcon(R.drawable.logo)
-          .setContentTitle(getResources().getString(R.string.comment_published));
-          if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED)
-          {
-            NotificationManagerCompat notificationManagerCompat = getSystemService(NotificationManagerCompat.class);
-            notificationManagerCompat.notify(111, builder.build());
-          }
+          NotificationCompat.Builder builder =
+          new NotificationCompat.Builder(CommentActivity.this, "commentPublished")
+            .setSmallIcon(R.drawable.logo)
+            .setContentTitle(getResources().getString(R.string.comment_published))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+          NotificationManagerCompat notificationManager =
+          NotificationManagerCompat.from(CommentActivity.this);
+          // Dont care bout this error
+          notificationManager.notify(111, builder.build());
           dialog.dismiss();
           finish();
         }, error ->

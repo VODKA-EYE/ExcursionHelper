@@ -1,7 +1,6 @@
 package com.example.excursionhelper;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -15,7 +14,6 @@ import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
@@ -151,6 +149,7 @@ public class MainActivity extends AppCompatActivity
     ss.setSpan(boldSpan, 11,13, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
     title_textview.setText(ss);
   }
+
 
   /*
   private String loadJSONFromAsset()
