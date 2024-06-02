@@ -56,12 +56,6 @@ public class ExcursionMainActivity extends AppCompatActivity
         selected_page++;
         LoadPage();
       }
-      else
-      {
-        Intent intent2 = new Intent(ExcursionMainActivity.this, CommentActivity.class);
-        intent2.putExtra("excursionId", excursionId);
-        startActivity(intent2);
-      }
     });
     goToMenu = findViewById(R.id.goto_mainmenu_button);
     goToMenu.setOnClickListener(view -> finish());

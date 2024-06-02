@@ -17,4 +17,6 @@
   <string name="content_cant_load">No access to data! Reopen app later.</string>
   <string name="content_offline">No access to data! Saved data loaded.</string>
   <string name="comment_not_published">Review not published! Please, try later.</string>
+  <string name="comments">Reviews</string>
+  <string name="comments_cant_load">No access to comments! Please, try later.</string>
 </resources>

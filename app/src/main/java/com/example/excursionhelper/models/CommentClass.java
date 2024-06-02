@@ -1,10 +1,11 @@
 package com.example.excursionhelper.models;
 
+import java.time.LocalDateTime;
+
 public class CommentClass
 {
 
-  String commentator, commentary;
-
+  String commentator, commentary, commentDate;
   Integer excursionID;
 
   public Integer getExcursionID()
@@ -24,4 +25,6 @@ public class CommentClass
   public String getComment(){return commentary;}
 
   public void setComment(String commentary){this.commentary = commentary;}
+  public String getCommentDate(){return commentDate;}
+  public void setCommentDate(String commentDate) {this.commentDate = commentDate;  }
 }

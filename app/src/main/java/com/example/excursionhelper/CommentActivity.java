@@ -46,9 +46,12 @@ public class CommentActivity extends AppCompatActivity {
     buttonLeaveComment = findViewById(R.id.buttonLeaveComment);
     buttonLeaveComment.setOnClickListener(view ->
     {
-      try {
+      try
+      {
         leaveComment();
-      } catch (JSONException e) {
+      }
+      catch (JSONException e)
+      {
         throw new RuntimeException(e);
       }
     });
@@ -69,7 +72,7 @@ public class CommentActivity extends AppCompatActivity {
       JsonObjectRequest getrequest = new JsonObjectRequest(Request.Method.POST,
         leaveCommentUrl, jsonBody, response ->
         {
-          NotificationCompat.Builder builder =
+          /*NotificationCompat.Builder builder =
           new NotificationCompat.Builder(CommentActivity.this, "commentPublished")
             .setSmallIcon(R.drawable.logo)
             .setContentTitle(getResources().getString(R.string.comment_published))
@@ -78,7 +81,7 @@ public class CommentActivity extends AppCompatActivity {
           NotificationManagerCompat notificationManager =
           NotificationManagerCompat.from(CommentActivity.this);
           // Dont care bout this error
-          notificationManager.notify(111, builder.build());
+          notificationManager.notify(111, builder.build()); */
           dialog.dismiss();
           finish();
         }, error ->

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+      android:id="@+id/commentatorName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Michael Jackson"
+      style="@style/NormalText"/>
+
+    <TextView
+      android:id="@+id/commentDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="30.12.2024"
+      android:layout_marginStart="8dp"
+      style="@style/NormalText"/>
+  </LinearLayout>
+  <TextView
+    android:id="@+id/commentContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="COMMENT COMMENT COMMENT COMMENT COMMENT COMMENT COMMENT COMMENT"
+    style="@style/NormalText"/>
+</LinearLayout>

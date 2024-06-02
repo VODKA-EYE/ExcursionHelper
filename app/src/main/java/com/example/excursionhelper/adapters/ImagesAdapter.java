@@ -35,7 +35,7 @@ public class ImagesAdapter extends BaseAdapter
   {
 
       LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-      view = inflater.inflate(R.layout.excursion_page_item, parent, false);
+      view = inflater.inflate(R.layout.image_list_item, parent, false);
 
       PhotoView photoView = view.findViewById(R.id.photo);
       Ion.with(photoView).load(images.get(position).getImageUrl());

@@ -17,4 +17,6 @@
   <string name="content_cant_load">Нет доступа к данным! Перезапустите приложение позже.</string>
   <string name="content_offline">Нет доступа к данным! Загружены сохранённые данные.</string>
   <string name="comment_not_published">Отзыв не опубликован! Попробуйте позже.</string>
+  <string name="comments">Отзывы</string>
+  <string name="comments_cant_load">Нет доступа к отзывам! Попробуйте позже.</string>
 </resources>

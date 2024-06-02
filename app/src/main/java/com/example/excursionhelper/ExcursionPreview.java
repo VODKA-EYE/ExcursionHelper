@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 public class ExcursionPreview extends AppCompatActivity
 {
   TextView titleTextView, mapUrlTextView, descriptionTextView, mapOpen, mapClose;
-  Button goToExcursion, goToMenu;
+  Button goToExcursion, goToMenu, goToComments;
   PhotoView mapPhoto;
   Integer excursionId;
   AlertDialog dialog;
@@ -73,6 +73,13 @@ public class ExcursionPreview extends AppCompatActivity
       mapPhoto.setVisibility(View.GONE);
     });
     checkpointListView = findViewById(R.id.checkpoints_listview);
+    goToComments = findViewById(R.id.comments_button);
+    goToComments.setOnClickListener(view ->
+    {
+      Intent intent2 = new Intent(ExcursionPreview.this, CommentsActivity.class);
+      intent2.putExtra("excursionId", excursionId);
+      startActivity(intent2);
+    });
   }
 
   private void LoadText()
